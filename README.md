@@ -42,8 +42,8 @@ Para una integración más completa, consulta la documentación oficial de CRUD 
 - Utiliza HTTPS para todas las solicitudes al API CRUD CRUD.
 - No compartas tu API Key en código público o en repositorios compartidos.
 
-## Dentro del Android Studio
-- Dentro de la carpeta home en el archivo ProductService agregamos la ruta del API KEY
+## Integracion del API KEY con Retrofit en Android Studio 
+- Dentro de la carpeta home en el archivo ProductService agregamos la ruta del API KEY usando Retrofit
      ```ruta
     companion object {
         val instance =
@@ -53,7 +53,7 @@ Para una integración más completa, consulta la documentación oficial de CRUD 
                 .build().create(ProductService::class.java)
     }
      ```
-- Tambien las demas rutas para el GET, POST, PUT y DELETE
+- Tambien las demas rutas para el GET, POST, PUT y DELETE con Retrofit
      ```ruta
     @GET("products")
     suspend fun getProducts(): List<Product>
